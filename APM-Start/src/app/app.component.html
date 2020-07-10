@@ -1,0 +1,25 @@
+
+<nav class='navbar navbar-expand navbar-light bg-light'>
+  <!-- <a class='navbar-brand' [routerLink]="['/welcome']">{{pageTitle}}</a> -->
+
+  <a class='navbar-brand' [routerLink]="['/welcome']">
+    <img  src="assets/images/logo.png"
+          [style.margin.px]='imageMargin'
+          [style.Width.px]='imageWidth'
+          [style.height.px]='imageHeight'
+          >
+
+  </a>
+
+  <ul class='nav nav-pills'>
+    <li><a class='nav-link' [routerLink]="['/welcome']">Home</a></li>
+    <li><a class='nav-link' [routerLink]="['/cartoonlist']">Cartoon List</a></li>
+  </ul>
+</nav>
+
+
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
+
+

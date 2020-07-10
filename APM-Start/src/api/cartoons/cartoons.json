@@ -1,0 +1,34 @@
+[
+  {
+    "cartoonId": 1,
+    "cartoonName": "Mr Bean",
+    "releaseDate": "March 19, 2019",
+    "description": "Mr. Bean is childish, selfish, extremely competitive and brings various unusual schemes and contrivances to everyday tasks.",
+    "imageUrl": "assets/images/MrBean.jpg",
+    "starRating":"4.8"
+  },
+  {
+    "cartoonId": 2,
+    "cartoonName": "Richie Rich",
+    "releaseDate": "March 20, 2019",
+    "description": "Richard Richie Rich Jr. is the world's richest kid.",
+    "imageUrl": "assets/images/RichieRich.jpg",
+    "starRating":"3.2"
+  },
+  {
+    "cartoonId": 3,
+    "cartoonName": "Sponge Bob",
+    "releaseDate": "March 21, 2019",
+    "description": "SpongeBob SquarePants is the title character and protagonist of the American animated... world of SpongeBob.",
+    "imageUrl": "assets/images/SpongeBob.jpg",
+    "starRating":"2.2"
+  },
+  {
+    "cartoonId": 3,
+    "cartoonName": "Tom and Jerry",
+    "releaseDate": "March 22, 2019",
+    "description": "Tom and Jerry is an American animated franchise and series of comedy short films created in 1940 by William Hanna.",
+    "imageUrl": "assets/images/TomJerry.jpg",
+    "starRating":"4.2"
+  }
+]

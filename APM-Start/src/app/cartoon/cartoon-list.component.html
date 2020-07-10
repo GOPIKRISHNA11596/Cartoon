@@ -1,0 +1,95 @@
+<div class='card'>
+  <!-- Card Header -->
+  <div class='card-header'>
+    <div class="text-center">
+      <h4 style="color: blue;">{{pageTitle}}</h4>
+    </div>
+  </div>
+
+  <!-- <div class='card-body'
+       style="background-color: darkgrey;"
+       *ngIf="cardBodyTwo" >
+    <div class="text-center">
+      <div class="row" >
+        <div class="col-sm-4" style="background-color: darkseagreen;">
+           <img [src]='cartoon.imageUrl'
+                [title]='cartoon.cartoonName'
+                [style.margin.px]='imageMargin'
+                [style.Width.px]='imageWidth'>
+        </div>
+        <div class="col-sm-6">
+         Description
+        </div>
+        </div>
+      </div>
+  </div> -->
+
+
+
+  <!-- Card Body -->
+  <div class='card-body'>
+      <!-- Search Box -->
+      <div class='row'>
+        <div class='col-md-2'>Filter by:</div>
+        <div class='col-md-4'>
+          <input type='text' [(ngModel)] = 'listFilter' />
+        </div>
+      </div>
+      <!--To display the filtered string from search box -->
+      <div class='row'>
+        <div class='col-md-2'>
+          <h4>Filtered by: {{listFilter}}</h4>
+        </div>
+      </div>
+      <!--Table -->
+      <div class='table-responsive'>
+        <table class='table'
+               *ngIf='cartoons && cartoons.length'>
+          <thead>
+            <tr>
+              <th>
+                <button class='btn btn-primary'
+                        (click)='toggleImage()'>
+                  {{showImage? 'Hide':'Show'}} Image
+                </button>
+              </th>
+              <th>Carton Name</th>
+              <th>Description</th>
+              <th>Release Date</th>
+              <th>5 Star Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let cartoon of filteredCartoons'>
+              <td>
+                <img *ngIf='showImage'
+                    [src]='cartoon.imageUrl'
+                    [title]='cartoon.cartoonName'
+                    [style.margin.px]='imageMargin'
+                    [style.Width.px]='imageWidth'>
+              </td>
+              <td>
+              <a [routerLink]="['/cartoons', cartoon.cartoonId]">{{cartoon.cartoonName}}</a>
+              </td>
+              <td>{{cartoon.description}}</td>
+              <td>{{cartoon.releaseDate}}</td>
+              <td> <pm-star [rating]='cartoon.starRating'
+                            (ratingClicked)='onRatingClicked($event)'></pm-star>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+<!-- Card Foorter : For Back Button in CartoonList -->
+<div class='card-footer'>
+  <button class='btn btn-outline-secondary'
+          (click)='onBack()'
+          style='width:80px'>
+    <i class='fa fa-chevron-left'></i> Back
+  </button>
+</div>
+
+
